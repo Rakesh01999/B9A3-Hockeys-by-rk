@@ -2,130 +2,594 @@
 <html lang="en" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hockey</title>
-    <!-- tailwind and daisyui cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hockey</title>
+  <!-- tailwind and daisyui cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <!-- tailwind custom classes -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
-                        'bg-primary': '#FF4240',
-                    }
-                }
-            }
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- tailwind custom classes -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'bg-primary': '#FF4240',
+          }
         }
-    </script>
+      }
+    }
+  </script>
 
-    <!-- custom styles -->
-    <style>
-        .font-manrope {
-            font-family: 'Manrope', sans-serif;
-        }
-    </style>
+  <!-- custom styles -->
+  <style>
+    .font-manrope {
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
 </head>
 
 <body class="font-manrope">
-    <header class="md:container md:mx-auto">
-        <!-- navbar -->
-        <nav>
-            <div class="navbar bg-base-100">
-              <div class="flex-1">
-                <div class="dropdown">
-                  <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                      stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-                    </svg>
-                  </div>
-                  <ul tabindex="0"
-                    class="menu text-base menu-sm dropdown-content mt-3 z-[1] p-2 text-base shadow bg-base-100 rounded-box w-52">
-                    <li><a>Home</a></li>
-                    <li><a>Shop</a></li>
-                    <li><a>News</a></li>
-                    <li><a>Contact</a></li>
-                  </ul>
-                </div>
-                <a class="btn btn-ghost text-xl lg:text-4xl">Hockey<span class="text-[FF4240]">’</span>s</a>
-              </div>
-              <div class="navbar-center hidden lg:flex">
-                <ul class="menu text-base menu-horizontal px-1">
-                  <li><a class="text-[#FF4240]">Home</a></li>
-                  <li><a>About</a></li>
-                  <li><a>Pages</a></li>
-                  <li><a>Blog</a></li>
-                  <li><a>Contact</a></li>
-                </ul>
-              </div>
-              <div class="">
-                <button class="btn  bg-[#FF4240] text-white">Get Ticket</button>
-              </div>
+  <header class="md:container md:mx-auto">
+    <!-- navbar -->
+    <nav>
+      <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
             </div>
-        </nav>
+            <ul tabindex="0"
+              class="menu text-base menu-sm dropdown-content mt-3 z-[1] p-2 text-base shadow bg-base-100 rounded-box w-52">
+              <li><a>Home</a></li>
+              <li><a>Shop</a></li>
+              <li><a>News</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl lg:text-4xl">Hockey<span class="text-[FF4240]">’</span>s</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu text-base menu-horizontal px-1">
+            <li><a class="text-[#FF4240]">Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Pages</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="">
+          <button class="btn  bg-[#FF4240] text-white">Get Ticket</button>
+        </div>
+      </div>
+    </nav>
 
-        <!-- slider section -->
-        <!-- <div class="carousel w-full"> -->
-        <div class="carousel w-[335px] h-[200px] lg:w-full lg:h-[550px]">
-            <!-- slide 1 -->
+    <!-- slider section -->
+    <!-- <div class="carousel w-full"> -->
+    <div class="carousel w-[335px] h-[200px] lg:w-full lg:h-[550px] ">
+      <!-- slide 1 -->
 
-            <!-- <div class="flex flex-col lg:flex-row gap-20 p-4 lg:p-24">
+      <!-- <div class="flex flex-col lg:flex-row gap-20 p-4 lg:p-24">
 
             </div> -->
-            
-            <div id="slide1" class="carousel-item relative w-full">
-              <img src="images/1.png" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide4" class="btn btn-circle">❮</a> 
-                <a href="#slide2" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-            <!-- slide 2 -->
-            <div id="slide2" class="carousel-item relative w-full">
-              <img src="images/1-2.jpg" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide1" class="btn btn-circle">❮</a> 
-                <a href="#slide3" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-            <!-- slide 3 -->
-            <div id="slide3" class="carousel-item relative w-full">
-              <img src="images/1-3.jpg" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide2" class="btn btn-circle">❮</a> 
-                <a href="#slide4" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
+
+      <div id="slide1" class="carousel-item relative w-full">
+        <img src="images/1.png" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide4" class="btn btn-circle">❮</a>
+          <a href="#slide2" class="btn btn-circle">❯</a>
         </div>
-    </header>
-    <main>
-        <!-- professional section -->
+      </div>
+      <!-- slide 2 -->
+      <div id="slide2" class="carousel-item relative w-full">
+        <img src="images/1-2.jpg" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide1" class="btn btn-circle">❮</a>
+          <a href="#slide3" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <!-- slide 3 -->
+      <div id="slide3" class="carousel-item relative w-full">
+        <img src="images/1-3.jpg" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide2" class="btn btn-circle">❮</a>
+          <a href="#slide4" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- professional section -->
+    <section class="md:container md:mx-auto my-20">
+      <div class="flex m-33 flex-col justify-center items-center text-[10px] lg:justify-center lg:items-center">
+        <h3 class="text-4xl font-extrabold text-[#131318]">
+          Professional Hockeys Club
+        </h3>
+        <p class="mt-6 text-center text-[16px]">Professional hockey clubs compete at the highest level in organized
+          leagues, showcasing skill, teamwork, and a passion for the fast-paced sport on the ice. These clubs serve as
+          hubs for elite athletes, embodying the spirit of competition and sportsmanship.</p>
+      </div>
+
+      <div class="grid mt-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <!-- segment 1 -->
+        <div class="card bg-base-100 p-9 ">
+          <figure><img class="w-36" src="images/r.svg" alt="" /></figure>
+          <div class="card-body">
+            <div class="text-center space-y-3 mt-3">
+              <h4 class="text-bold text-[#131318] text-[20px]">Prayer Facility</h4>
+              <p>Amet consectetur. Condimentum dignissim adipiscing .</p>
+            </div>
+            <!-- <div class="rating justify-center">
+                  </div> -->
+          </div>
+        </div>
+        <!-- segment 2 -->
+        <div class="card bg-base-100 p-9 ">
+          <figure><img class="w-36" src="images/g.svg" alt="" /></figure>
+          <!-- <div class="card-body"> -->
+          <div class="card-body">
+            <div class="text-center space-y-3 mt-3">
+              <h4 class="text-bold text-[#131318] text-[20px]">Experienced Coach</h4>
+              <p>Amet consectetur. Condimentum dignissim adipiscing .</p>
+            </div>
+            <!-- <div class="rating justify-center">
+                  </div> -->
+          </div>
+        </div>
+        <!-- segment 3 -->
+        <div class="card bg-base-100 p-9 ">
+          <figure><img class="w-36" src="images/y.svg" alt="" /></figure>
+          <div class="card-body">
+            <div class="text-center space-y-3 mt-3">
+              <h4 class="text-bold text-[#131318] text-[20px]">Senior Player</h4>
+              <p>Amet consectetur. Condimentum dignissim adipiscing .</p>
+            </div>
+            <!-- <div class="rating justify-center">
+                  </div> -->
+          </div>
+        </div>
+        <!-- segment 4 -->
+        <div class="card bg-base-100 p-9 ">
+          <figure><img class="w-36" src="images/b.svg" alt="" /></figure>
+          <div class="card-body">
+            <div class="text-center space-y-3 mt-3">
+              <h4 class="text-bold text-[#131318] text-[20px]">Training Ground</h4>
+              <p>Amet consectetur. Condimentum dignissim adipiscing .</p>
+            </div>
+            <!-- <div class="rating justify-center">
+                  </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- program section -->
+    <!-- <section class="mx-36 mb-32"> -->
+    <section class="md:container md:mx-auto">
+      <!-- text div -->
+      <!-- <div class="flex flex-col justify-center items-center text-[10px] lg:justify-center lg:items-center"> -->
+      <div class="flex flex-col text-[10px]">
+        <h3 class="text-4xl font-extrabold text-center">Program Sections</h3>
+        <p class="m-6 text-[16px] text-center">
+          Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam
+          proin.
+        </p>
+      </div>
+      <!-- image div -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-33">
+        <!-- box 1 -->
         <div>
-            <div class="flex flex-col justify-center items-center text-[10px] lg:justify-center lg:items-center ">
-                <h3 class="text-4xl font-extrabold text-[#131318]">
-                    Professional Hockeys Club
-                </h3>
-                <p class="text-center text-[16px]">Professional hockey clubs compete at the highest level in organized leagues, showcasing skill, teamwork, and a passion for the fast-paced sport on the ice. These clubs serve as hubs for elite athletes, embodying the spirit of competition and sportsmanship.</p>
+          <!-- <div class="w-full h-full bg-[url(images/2.png)] bg-cover bg-center"> -->
+          <div class=" h-[338px] bg-[url(images/2.png)] bg-cover bg-center">
+            <div class="w-full h-full flex  justify-center items-center backdrop-brightness-50">
+              <div class="text-white pl-10">
+                <h1 class="mb-5 text-5xl font-bold ">Junior Program</h1>
+                <p class="mb-5">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit
+                  enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor congue sed et
+                  in.
+                </p>
+                <button class="btn bg-[#FF4240] text-white">Register Now!</button>
+              </div>
             </div>
-
-            <div>
-
-            </div>
+          </div>
         </div>
-    </main>
-    <footer>
+        <!-- box 2 -->
+        <div>
+          <!-- <div class="w-full h-full bg-[url(images/4.png)] bg-cover bg-center"> -->
+          <div class=" h-[338px] bg-[url(images/3.png)] bg-cover bg-center">
+            <div class="w-full h-full flex  justify-center items-center backdrop-brightness-50">
+              <div class="text-white pl-10">
+                <h1 class="mb-5 text-5xl font-bold ">Junior Program</h1>
+                <p class="mb-5">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit
+                  enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor congue sed et
+                  in.
+                </p>
+                <button class="btn bg-[#FF4240] text-white">Register Now!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- box 3 -->
+        <div class="col-span-2">
+          <div class="w-full h-full bg-[url(images/4.png)] bg-cover bg-center">
+            <!-- <div class="w-[573px] h-[338px] bg-[url(images/5.png)] bg-cover bg-center"> -->
+            <div class="w-full h-full flex  justify-center items-center backdrop-brightness-50">
+              <div class="text-white pl-10">
+                <h1 class="mb-5 text-5xl font-bold ">Junior Program</h1>
+                <p class="mb-5">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit
+                  enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor congue sed et
+                  in.
+                </p>
+                <button class="btn bg-[#FF4240] text-white">Register Now!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    </footer>
+    </section>
+
+    <!-- Our New Products section -->
+    <section class="m-32 md:container md:mx-auto">
+      <!-- texts -->
+      <div class="flex flex-col justify-center items-center text-[10px] lg:flex-col m-10">
+        <h3 class="text-4xl font-extrabold text-[#131318] text-center">
+          Our New Products
+        </h3>
+        <p class="mt-6 text-center text-[16px]">
+          Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam
+          proin.
+        </p>
+      </div>
+      <!-- grids of cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2">
+
+        <!-- card 1 -->
+        <div>
+
+          <div class="flex shadow-xl rounded-lg">
+            <div class="">
+              <figure class="py-5 pl-5">
+                <img src="images/5.png" alt="" class="rounded-xl" />
+              </figure>
+            </div>
+
+            <!-- <div class="card-body items-center text-center"> -->
+            <div class="card-body gap-4">
+              <div class="flex gap-2">
+                <div class="flex">
+                  <img src="images/star.png" alt="">
+                  <p>5.0</p>
+                </div>
+                <div class="flex">
+                  <img src="images/eye.png" alt="">
+                  <p>20</p>
+                </div>
+                <div class="flex">
+                  <img src="images/heart.png" alt="">
+                  <p>200</p>
+                </div>
+              </div>
+              <div>
+                <h2 class="card-title text-[#131318] font-extrabold text-[20px]">World Cup Flags Football</h2>
+              </div>
+              <div>
+                <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. </p>
+              </div>
+              <div class="card-actions">
+                <div>
+                  <h3 class="text-[#FF4240] text-[18px] font-extrabold">Price - $22.00</h3>
+                </div>
+                <div class="flex">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p>Delivery Fee : Free</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- card 2 -->
+        <div>
+
+        <div class="flex shadow-xl rounded-lg">
+          <div class="">
+            <figure class="py-5 pl-5">
+              <img src="images/6.png" alt="" class="rounded-xl" />
+            </figure>
+          </div>
+
+          <!-- <div class="card-body items-center text-center"> -->
+          <div class="card-body gap-4">
+            <div class="flex gap-2">
+              <div class="flex">
+                <img src="images/star.png" alt="">
+                <p>5.0</p>
+              </div>
+              <div class="flex">
+                <img src="images/eye.png" alt="">
+                <p>20</p>
+              </div>
+              <div class="flex">
+                <img src="images/heart.png" alt="">
+                <p>200</p>
+              </div>
+            </div>
+            <div>
+              <h2 class="card-title text-[#131318] font-extrabold text-[20px]">World Cup Flags Football</h2>
+            </div>
+            <div>
+              <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. </p>
+            </div>
+            <div class="card-actions">
+              <div>
+                <h3 class="text-[#FF4240] text-[18px] font-extrabold">Price - $22.00</h3>
+              </div>
+              <div class="flex">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                  </svg>
+                </div>
+                <div>
+                  <p>Delivery Fee : Free</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        </div>
+        <!-- card 3 -->
+        <div>
+
+          <div class="flex shadow-xl rounded-lg">
+            <div class="">
+              <figure class="py-5 pl-5">
+                <img src="images/7.png" alt="" class="rounded-xl" />
+              </figure>
+            </div>
+
+            <!-- <div class="card-body items-center text-center"> -->
+            <div class="card-body gap-4">
+              <div class="flex gap-2">
+                <div class="flex">
+                  <img src="images/star.png" alt="">
+                  <p>5.0</p>
+                </div>
+                <div class="flex">
+                  <img src="images/eye.png" alt="">
+                  <p>20</p>
+                </div>
+                <div class="flex">
+                  <img src="images/heart.png" alt="">
+                  <p>200</p>
+                </div>
+              </div>
+              <div>
+                <h2 class="card-title text-[#131318] font-extrabold text-[20px]">World Cup Flags Football</h2>
+              </div>
+              <div>
+                <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. </p>
+              </div>
+              <div class="card-actions">
+                <div>
+                  <h3 class="text-[#FF4240] text-[18px] font-extrabold">Price - $22.00</h3>
+                </div>
+                <div class="flex">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p>Delivery Fee : Free</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- card 4 -->
+        <div>
+
+          <div class="flex shadow-xl rounded-lg">
+            <div class="">
+              <figure class="py-5 pl-5">
+                <img src="images/8.png" alt="" class="rounded-xl" />
+              </figure>
+            </div>
+
+            <!-- <div class="card-body items-center text-center"> -->
+            <div class="card-body gap-4">
+              <div class="flex gap-2">
+                <div class="flex">
+                  <img src="images/star.png" alt="">
+                  <p>5.0</p>
+                </div>
+                <div class="flex">
+                  <img src="images/eye.png" alt="">
+                  <p>20</p>
+                </div>
+                <div class="flex">
+                  <img src="images/heart.png" alt="">
+                  <p>200</p>
+                </div>
+              </div>
+              <div>
+                <h2 class="card-title text-[#131318] font-extrabold text-[20px]">World Cup Flags Football</h2>
+              </div>
+              <div>
+                <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. </p>
+              </div>
+              <div class="card-actions">
+                <div>
+                  <h3 class="text-[#FF4240] text-[18px] font-extrabold">Price - $22.00</h3>
+                </div>
+                <div class="flex">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p>Delivery Fee : Free</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- card 5 -->
+        <div>
+
+          <div class="flex shadow-xl rounded-lg">
+            <div class="">
+              <figure class="py-5 pl-5">
+                <img src="images/9.png" alt="" class="rounded-xl" />
+              </figure>
+            </div>
+
+            <!-- <div class="card-body items-center text-center"> -->
+            <div class="card-body gap-4">
+              <div class="flex gap-2">
+                <div class="flex">
+                  <img src="images/star.png" alt="">
+                  <p>5.0</p>
+                </div>
+                <div class="flex">
+                  <img src="images/eye.png" alt="">
+                  <p>20</p>
+                </div>
+                <div class="flex">
+                  <img src="images/heart.png" alt="">
+                  <p>200</p>
+                </div>
+              </div>
+              <div>
+                <h2 class="card-title text-[#131318] font-extrabold text-[20px]">World Cup Flags Football</h2>
+              </div>
+              <div>
+                <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. </p>
+              </div>
+              <div class="card-actions">
+                <div>
+                  <h3 class="text-[#FF4240] text-[18px] font-extrabold">Price - $22.00</h3>
+                </div>
+                <div class="flex">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p>Delivery Fee : Free</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- card 6 -->
+        <div>
+
+          <div class="flex shadow-xl rounded-lg">
+            <div class="">
+              <figure class="py-5 pl-5">
+                <img src="images/10.png" alt="" class="rounded-xl" />
+              </figure>
+            </div>
+
+            <!-- <div class="card-body items-center text-center"> -->
+            <div class="card-body gap-4">
+              <div class="flex gap-2">
+                <div class="flex">
+                  <img src="images/star.png" alt="">
+                  <p>5.0</p>
+                </div>
+                <div class="flex">
+                  <img src="images/eye.png" alt="">
+                  <p>20</p>
+                </div>
+                <div class="flex">
+                  <img src="images/heart.png" alt="">
+                  <p>200</p>
+                </div>
+              </div>
+              <div>
+                <h2 class="card-title text-[#131318] font-extrabold text-[20px]">World Cup Flags Football</h2>
+              </div>
+              <div>
+                <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. </p>
+              </div>
+              <div class="card-actions">
+                <div>
+                  <h3 class="text-[#FF4240] text-[18px] font-extrabold">Price - $22.00</h3>
+                </div>
+                <div class="flex">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p>Delivery Fee : Free</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    
+  </main>
+  <footer>
+
+  </footer>
 </body>
 
 </html>
